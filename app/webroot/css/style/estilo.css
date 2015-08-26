@@ -1,0 +1,307 @@
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans;
+	font-size: px;
+	line-height: 1.25em;
+}
+
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td
+{margin: 0; padding: 0; outline: none;}
+
+fieldset{border:0;}
+
+p, li, td, dd, span, div, section, arcticle{
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+body{
+	background: #f5f5f5;
+}
+
+.menu{
+  top: 0;
+  width: 350px;
+  height: 100%;
+  left: -350px;
+  position: fixed;
+  background-color: #5FA2DB;
+  z-index: 99999999999;
+  transition: left 0.3s, opacity 0.3s;
+}
+
+.head_menu{
+	background-color: #3F73AA;
+	width: 100%;
+	height: 60px;
+	float: left;
+}
+
+.head_menu h3{
+	font-size: 14px;
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  text-align: center;  
+  padding-top: 23px;
+  color: #FFF;
+}
+
+.menu_options{
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-top: 20px;
+	box-shadow: rgba(0, 0, 0, 0.258824) 2px 5px 5px;
+}
+
+.menu ul li {
+  padding-bottom: 10px;
+}
+
+.menu ul li a{
+	color: #FFFFFF;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.campo {
+    width: 410px;   
+    outline: 0;   
+    -webkit-tap-highlight-color: rgba(255,255,255,0);   
+    text-align: left;   
+    line-height: 1.2142em;   
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;   
+    padding: .67861em 1em;   
+    background: #fff;   
+    border: 1px solid rgba(0,0,0,.15);   
+    color: rgba(0,0,0,.8);   
+    border-radius: .2857rem;   
+    -webkit-transition: background-color .2s ease,box-shadow .2s ease,border-color .2s ease;   
+    transition: background-color .2s ease,box-shadow .2s ease,border-color .2s ease;   
+    margin: 0 10px 20px 10px;
+}
+
+.data{
+	width: 80px;
+}
+
+.cadastro_aluno label{
+    width: 150px;
+    float: left;
+    color: rgba(0,0,0,.6);
+}
+
+.cadastro_aluno{
+	position: relative;
+	display: block;
+	background-color: #fff;
+	-webkit-box-shadow: 0 4px 10px -2px rgba(0,0,0,0.05);
+	box-shadow: 0 4px 10px -2px rgba(0,0,0,0.05);
+	width: 640px;
+	margin: 0 auto;
+	margin: 20px 0 20px 0;
+	border: 1px solid #a5c8e5;
+	margin: 0 auto;
+}
+
+.cadastro_aluno h3{
+	padding: 10px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-family: 'Titillium Web', sans-serif;
+	margin-bottom: 10px;
+	background-color: #5fa2db;
+	width: 100%;
+	float: left;
+	text-align: center;
+	font-weight: 100;
+}
+
+#form_aluno{
+	/*float: left;*/
+	padding: 20px;
+}
+
+div#conteudo {
+	float: left;
+	width: 100%;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	padding: 0 20px;
+}
+
+.menu_superior{
+	width: 100%;
+	height: 60px;
+	background-color: #5FA2DB; /*#3399ff*/
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	display: block;
+	float: left;
+	clear: both;
+	margin-bottom: 20px;
+	position: fixed;
+	z-index: 100;
+}
+
+#menu_icon{
+	width: 60px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+
+/* TABELA */
+
+.table-card {
+	/*width: 100%;*/
+	float: left;
+	background-color: #FFF;/*#5fa2db;*/
+	border-color: #a5c8e5;
+	color: #ffffff;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+	font-size: 12px;
+	margin-bottom: 20px;
+	/*max-width: 100%;
+	overflow-x: scroll;*/
+}
+
+.table-card-body {
+	color: #0073aa;
+	/*padding: 24px;*/
+}
+
+tr.odd {
+	background: #f9f9f9;
+}
+
+.td_Cod,
+.td_Assinante,
+.td_Telefones,
+.td_Dados_Entrega,
+.td_Dados_Pessoais,
+.td_Dados_Endereco{
+	white-space: nowrap;
+}
+
+table.tabela {
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 !important;
+	border: 0;
+}
+
+tbody tr th {
+  border-top: 0;
+  border-bottom: 2px solid rgba(189, 193, 193, 0.2);
+  vertical-align: baseline;
+  color: inherit;
+  font-weight: 500;
+  padding: 10px 8px;
+  line-height: 1.846153846;
+  text-align: left;
+    border-left: 0;
+  border-right: 0;
+}
+
+.tabela tr td {
+	padding: 10px 8px;
+	line-height: 1.846153846;
+	vertical-align: top;
+	border-top: 1px solid rgba(189, 193, 193, 0.2);
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	vertical-align: middle;
+	border-right: 1px solid #E2E3E3;
+}
+
+.table-card-body:before, .table-card-body:after {
+	content: " ";
+	display: table;
+}
+
+.adicionar{
+	border: 0;
+	cursor: pointer; 
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 5px;
+	float: right;
+	text-align: center;
+	background-color: #e0e0e0;
+	color: rgba(0,0,0,.6);
+	margin-top: 0;
+	padding: 11px 22px;
+	border-radius: 4px;
+}
+
+
+.bt{
+	width: 100px;
+  float: right;
+  clear: both;
+  padding: 8px 10px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #F9F9F9;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  will-change: opacity, transform;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.bt_alterar {
+  background-color: #5fa2db;
+}
+
+.bt_excluir {
+  background-color: #e77755;
+}
+
+.input.hour {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card{
+	width: 300px;
+  max-width: 100%;
+  float: left;
+  padding: 30px;
+  margin: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+  background-color: #FFF;
+}
+

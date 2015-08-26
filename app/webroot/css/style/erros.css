@@ -1,0 +1,108 @@
+div#menu {
+	background: url('/reifor/img/fundo-menu.png');
+	min-height: 140px;
+	
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.container{
+	margin-top: 140px;
+	min-height: 450px;
+	padding-top: 120px;
+}
+
+div.erro {
+	margin: 0 auto;
+	display: block;
+	width: 360px;
+	text-align: center;
+}
+
+.sucesso,
+.erro h3.erro404{
+	float: left;
+	font-family: "ProximaNova-Light";
+	font-weight: 100;
+	font-size: 60px;
+	color: #2d2a2a;
+}
+
+.sucesso.numeral,
+h3.sucesso {
+	text-transform: uppercase;
+}
+
+.sucesso.numeral,
+.erro h3.erro404.numeral{
+	font-family: "ProximaNova-Bold";
+	font-weight: 100;	
+	margin-left: 10px;
+}
+
+button.bt.voltar {
+	font-family: "ProximaNova-Light";
+	font-weight: 100;
+	color: #FFF;
+	background-color: #23286d;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+.erro .bateria_erro {
+	float: left;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+
+.erro p {
+	clear: both;
+	color: #2d2a2a;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: "ProximaNova-Regular";
+}
+
+button.bt.cuidado-encontrar {
+	margin-right: 15px;
+}
+
+#erro_interno{
+	color: #14435e;
+}
+
+#sucesso{
+	float: left;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	.erro {
+		width: 100%;
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.erro h3.sucesso {
+	    font-size: 24px;
+	}
+	
+	img#sucesso {
+	    width: 20px;
+	    margin-top: 5px;
+	    margin-right: 5px;
+	    margin-left: 15px;
+	}
+	
+	div#menu {
+	    min-height: 100px;
+	}
+	
+	.container {
+	    min-height: 290px;
+	    margin-top: 0;
+	}
+}
+

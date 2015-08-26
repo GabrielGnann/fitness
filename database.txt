@@ -1,0 +1,78 @@
+﻿CREATE DATABASE `academia`;
+
+
+CREATE TABLE `avaliador` (
+  `avaliador_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `cpf` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `telefone` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `sexo` varchar(1) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cidade` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `logradouro` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `estado` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `cep` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `bairro` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`avaliador_id`),
+  UNIQUE KEY `avaliador_id_UNIQUE` (`avaliador_id`),
+  UNIQUE KEY `cpf_UNIQUE` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE TABLE `avaliacao` (
+  `numero_avaliacao` int(11) NOT NULL AUTO_INCREMENT,
+  `data` datetime NOT NULL,
+  `descricao` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `altura` double NOT NULL,
+  `peso` double NOT NULL,
+  `imc` double NOT NULL,
+  `indice_gordura` double NOT NULL,
+  `braco_dir` double NOT NULL,
+  `braco_esq` double NOT NULL,
+  `torax` double NOT NULL,
+  `abdomen` double NOT NULL,
+  `peso_ideal` double DEFAULT NULL,
+  `gordura_ideal` double DEFAULT NULL,
+  `aluno_id_fk` int(11) NOT NULL,
+  `avaliador_id_fk` int(11) NOT NULL,
+  PRIMARY KEY (`numero_avaliacao`),
+  UNIQUE KEY `numero_avaliacao_UNIQUE` (`numero_avaliacao`),
+  KEY `pessoa_id_idx` (`aluno_id_fk`),
+  CONSTRAINT `aluno_id` FOREIGN KEY (`aluno_id_fk`) REFERENCES `aluno` (`aluno_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+
+
+
+CREATE TABLE `aluno` (
+  `aluno_id` int(11) NOT NULL AUTO_INCREMENT,
+  `data_nascimento` datetime NOT NULL,
+  `nome` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `cpf` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `telefone` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `sexo` varchar(1) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cidade` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `logradouro` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `estado` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `cep` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `bairro` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`aluno_id`),
+  UNIQUE KEY `aluno_id_UNIQUE` (`aluno_id`),
+  UNIQUE KEY `cpf_UNIQUE` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE TABLE `agendamento` (
+  `agendamento_id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` datetime NOT NULL,
+  `hora_inicio` time NOT NULL,
+  `hora_termino` time NOT NULL,
+  `aluno_id_fk` int(11) NOT NULL,
+  PRIMARY KEY (`agendamento_id`),
+  UNIQUE KEY `agendamento_id_UNIQUE` (`agendamento_id`),
+  KEY `pessoa_idFK_idx` (`aluno_id_fk`),
+  CONSTRAINT `aluno` FOREIGN KEY (`aluno_id_fk`) REFERENCES `aluno` (`aluno_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
